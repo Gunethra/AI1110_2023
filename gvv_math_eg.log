@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.26)  29 APR 2023 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.26)  29 APR 2023 19:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1268,81 +1268,45 @@ Type  H <return>  for immediate help.
 l.320 \end{enumerate}
                      
 ? 
-! Undefined control sequence.
-\cbrak #1->\ensureath 
-                      {\left \{#1\right \}}
-l.325 \end{align}
-                 
-? 
-! Undefined control sequence.
-\cbrak #1->\ensureath 
-                      {\left \{#1\right \}}
-l.325 \end{align}
-                 
-? 
-! Undefined control sequence.
-\cbrak #1->\ensureath 
-                      {\left \{#1\right \}}
-l.329 \end{align}
-                 
-? 
-! Undefined control sequence.
-\cbrak #1->\ensureath 
-                      {\left \{#1\right \}}
-l.329 \end{align}
-                 
-? 
 ! Missing { inserted.
 <to be read again> 
                    \left 
-l.362 \end{align}
+l.339 \end{align}
                  
 ? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.362 \end{align}
-                 
-? 
-! Undefined control sequence.
-\cbrak #1->\ensureath 
-                      {\left \{#1\right \}}
-l.362 \end{align}
+l.339 \end{align}
                  
 ? 
 ! Missing { inserted.
 <to be read again> 
                    \left 
-l.362 \end{align}
+l.339 \end{align}
                  
 ? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.362 \end{align}
-                 
-? 
-! Undefined control sequence.
-\cbrak #1->\ensureath 
-                      {\left \{#1\right \}}
-l.362 \end{align}
+l.339 \end{align}
                  
 ? 
 
-Underfull \vbox (badness 1067) has occurred while \output is active []
+Underfull \vbox (badness 1132) has occurred while \output is active []
 
 
 ! Undefined control sequence.
-l.379 \chapter
+l.356 \chapter
               {\textbf{\underline{Conclusion}}}\\
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 
-LaTeX Warning: Citation `code' on page 1 undefined on input line 381.
+LaTeX Warning: Citation `code' on page 1 undefined on input line 358.
 
 No file gvv_math_eg.bbl.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
@@ -1356,10 +1320,10 @@ Package rerunfilecheck Info: File `gvv_math_eg.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29083 strings out of 478287
- 574149 string characters out of 5849289
- 841833 words of memory out of 5000000
- 46667 multiletter control sequences out of 15000+600000
+ 29082 strings out of 478287
+ 574140 string characters out of 5849289
+ 840833 words of memory out of 5000000
+ 46666 multiletter control sequences out of 15000+600000
  538964 words of font info for 176 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,10n,96p,503b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1371,7 +1335,7 @@ onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on gvv_math_eg.pdf (1 page, 56100 bytes).
+Output written on gvv_math_eg.pdf (1 page, 56127 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream
