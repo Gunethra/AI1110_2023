@@ -132,7 +132,7 @@ columns=fullflexible
 \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
 \providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
 \providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
-\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\cbrak}[1]{\ensureath{\left\{#1\right\}}}
 \providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
 \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
 \theoremstyle{remark}
@@ -295,61 +295,89 @@ columns=fullflexible
 
 
 \chapter{\textbf{\large{Question 13.2.12:}}}
-\\\\
-\chapter{\textbf{\underline{Problem Statement}}}\\
+
+\begin{enumerate}
+    \chapter{\textbf{\underline{Problem Statement}}}
+\end{enumerate}
 
 A die is tossed thrice. Find the probability of getting an odd number at least once.
-\\\\
-\chapter{\textbf{\underline{Solution}}}\\\\
-\textbf{Given:} \\
-We are given that the die is tossed thrice.
-\\\\
-\textbf{Need to find:} \\
-Probability of getting an odd number at least once in the three trials.\\
-\\
-\textbf{Solving steps:} \\
-The sample space for the experiment is; 
-\begin{align}
-    S = \{1,2,3,4,5,6\}
-\end{align}
+\begin{enumerate}
+    \chapter{\textbf{\underline{Solution}}}
+\end{enumerate}
 
-Required probability of at least one odd observation is equivalent to the probability of non occurrence for all observations being even.\\\\
-Let 
+\begin{enumerate}
+    \textbf{Given:}
+\end{enumerate}
+We are given that the die is tossed thrice.
+\begin{enumerate}
+    \textbf{Need to find:} 
+\end{enumerate}
+
+Probability of getting an odd number at least once in the three trials.
+
+\begin{enumerate}
+    \textbf{Solving steps:}
+\end{enumerate}
+Let X be a random variable defined as the number of odd number occurrences in three trials.
+Possible values of random variable X are; 
 \begin{align}
-    \pr A = Probability\:o\!f\:all\:observations\:being\:even \nonumber
+    X = \cbrak{0, 1, 2, 3}
 \end{align}
-\tab\tab\tab\tab and 
+Required values of X are; 
 \begin{align}
-    \pr B = Probability\:o\!f\:atleast\:one\:observation\:being\:odd \nonumber
+    X = \cbrak{1, 2 ,3}
 \end{align}
-\begin{align}
-    \implies \pr B=1 - \pr A
-\end{align}
-\\
-Possible even observations are; 
-\begin{align}
-    S_{even} = \{2,4,6\}
-\end{align}
-\\
-Probability of an observation being even is;
+which correspond to at least one odd number.
+% \begin{align}
+%     \pr A = Probability\:o\!f\:all\:observations\:being\:even \nonumber
+% \end{align}
+% and 
+% \begin{align}
+%     \pr {B} = Probability\:o\!f\:atleast\:one\:observation\:being\:odd \nonumber
+% \end{align}
+% \begin{align}
+%     \implies \pr {B}=1 - \pr {A}
+% \end{align}
+% \\
+
+% \\
+% Probability of an observation being even is;
+% \begin{align}
+%     p = \frac{3}{6} = \frac{1}{2} \nonumber
+% \end{align}
+% \\
+% Probability of all three observation being even is;
+% \begin{align}
+%     \pr {A}=\frac{1}{2}\times\frac{1}{2}\times\frac{1}{2}=\frac{1}{8}
+% \end{align}
+% \\
+Probability of an observation being odd is;
 \begin{align}
     p = \frac{3}{6} = \frac{1}{2} \nonumber
 \end{align}
-\\
-Probability of all three observation being even is;
+We know that;
 \begin{align}
-    \pr A=\frac{1}{2}*\frac{1}{2}*\frac{1}{2}=\frac{1}{8}
+    P(X=i) = ^{n}C_{i} \times p^{i} \times p^ \brak {{n-i}} \\
+    where\:n = 3\:and\:i \in \cbrak{1,2,3} \nonumber
 \end{align}
-\\
+On solving;
+\begin{align}
+    P(X=1) = ^{3}C_{1} \times \left(\frac{1}{2}\right)^{1} \times \left(\frac{1}{2}\right)^{(3-1)}\\ \nonumber \\
+    P(X=1) = \frac{3}{8} \nonumber \\ \nonumber \\
+    P(X=2) = ^{3}C_{2} \times \left(\frac{1}{2}\right)^{2} \times \left(\frac{1}{2}\right)^{(3-2)}\\ \nonumber \\
+    P(X=2) = \frac{3}{8} \nonumber \\ \nonumber \\
+    P(X=3) = ^{3}C_{3} \times \left(\frac{1}{2}\right)^{3} \times \left(\frac{1}{2}\right)^{(3-3)}\\ \nonumber \\
+    P(X=3) = \frac{1}{8} \nonumber
+\end{align}
+Required probability of at least one odd observation is equivalent to sum of P(X=1), P(X=2) and P(X=3).
 Therefore, probability of at least one odd observation is;
 \begin{align}
-    \pr B=1-\pr A=1-\frac{1}{8}=\frac{7}{8} \nonumber \\
     \therefore
-    \pr B=\frac{7}{8}=0.875
+    \pr {At\:least\:one\:odd}=\frac{7}{8}=0.875 \nonumber \\
 \end{align}
 
 \chapter{\textbf{\underline{Conclusion}}}\\
 
 The probability of getting an odd number at least once is 0.875 as also calculated using the python code.\cite{code}
 \bibliography{bibliography}
-\end{document}
+\end{document}m
