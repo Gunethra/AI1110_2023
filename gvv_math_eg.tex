@@ -46,7 +46,7 @@
 %\usepackage{cases}
 %\usepackage{subfig}
 %\usepackage{xtab}
-%\usepackage{longtable}
+%\usepackage{longtable} 
 %\usepackage{multirow}
 %\usepackage{algorithm}
 %\usepackage{algpseudocode}
@@ -332,21 +332,28 @@ Probability of an observation being odd is;
 \begin{align}
     p = \frac{3}{6} = \frac{1}{2}
 \end{align}
-We know that;
+Let $F_{X}\brak{i}$ be the \textbf{Cumulative distribution function}(CDF) such that;
 \begin{align}
-    \pr{X=i} = ^{n}C_{i} \times p^{i} \times (1-p)^ \brak {{n-i}} \\
-    where\:n = 3\:and\:i \in \cbrak{0,1,2,3} 
+    F_{X}\brak{i} &= \pr{X > i}\\
+    \pr{X=i} &= ^{n}C_{i} \times p^{i} \times (1-p)^ \brak {n-i} \\
+    where\:n &= 3\:and\:i \in \cbrak{0,1,2,3}
 \end{align}
 On solving;
 \begin{align}
     \pr{X=1} &= ^{3}C_{1} \times \brak{\frac{1}{2}}^{1} \times \brak{\frac{1}{2}}^{(3-1)}\\
-    \pr{X=1} &= \frac{3}{8}\\
+    \implies \pr{X=1} &= \frac{3}{8}\\
     \pr{X=2} &= ^{3}C_{2} \times \brak{\frac{1}{2}}^{2} \times \brak{\frac{1}{2}}^{(3-2)}\\
-    \pr{X=2} &= \frac{3}{8}\\
+    \implies \pr{X=2} &= \frac{3}{8}\\
     \pr{X=3} &= ^{3}C_{3} \times \brak{\frac{1}{2}}  ^{3} \times \brak{\frac{1}{2}}^{(3-3)}\\
-    \pr{X=3} &= \frac{1}{8}
+    \implies \pr{X=3} &= \frac{1}{8}
 \end{align}
-Required probability of at least one odd observation is equivalent to sum of \pr{X=1}, \pr{X=2} and \pr{X=3}.
+Required probability of at least one odd observation is equivalent to $F_{X}\brak{0}$.
+\begin{align}
+    F_{X}\brak{0} &= \pr{X=\brak{i>0}}\\
+    &=\sum_{i=1}^{3} {\pr{X=i}}\\
+    &=\pr{X=1}+\pr{X=2}+\pr{X=3}\\
+    &=\frac{7}{8}
+\end{align}
 Therefore, probability of at least one odd observation is;
 \begin{align}
     \therefore
