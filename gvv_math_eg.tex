@@ -321,24 +321,15 @@ Probability of an observation being odd is;
 \end{align}
 Let $F_{X}\brak{i}$ be the \textbf{Cumulative distribution function}(CDF) such that;
 \begin{align}
-    F_{X}\brak{i} &= \pr{X > i}\\
+    F_{X}\brak{i} &= \pr{X \le i}\\
     \pr{X=i} &= ^{n}C_{i} \times p^{i} \times (1-p)^ \brak {n-i} \\
     where\:n &= 3\:and\:i \in \cbrak{0,1,2,3}
 \end{align}
 On solving;
+Required probability of at least one odd observation is equivalent to $F_{X}\brak{3}-F_{X}\brak{0}$.
 \begin{align}
-    \pr{X=1} &= ^{3}C_{1} \times \brak{\frac{1}{2}}^{1} \times \brak{\frac{1}{2}}^{(3-1)}\\
-    \implies \pr{X=1} &= \frac{3}{8}\\
-    \pr{X=2} &= ^{3}C_{2} \times \brak{\frac{1}{2}}^{2} \times \brak{\frac{1}{2}}^{(3-2)}\\
-    \implies \pr{X=2} &= \frac{3}{8}\\
-    \pr{X=3} &= ^{3}C_{3} \times \brak{\frac{1}{2}}  ^{3} \times \brak{\frac{1}{2}}^{(3-3)}\\
-    \implies \pr{X=3} &= \frac{1}{8}
-\end{align}
-Required probability of at least one odd observation is equivalent to $F_{X}\brak{0}$.
-\begin{align}
-    F_{X}\brak{0} &= \pr{X=\brak{i>0}}\\
+    F_{X}\brak{3}-F_{X}\brak{0} &= \pr{X=\brak{i>0}}\\
     &=\sum_{i=1}^{3} {\pr{X=i}}\\
-    &=\pr{X=1}+\pr{X=2}+\pr{X=3}\\
     &=\frac{7}{8}
 \end{align}
 Therefore, probability of at least one odd observation is;
