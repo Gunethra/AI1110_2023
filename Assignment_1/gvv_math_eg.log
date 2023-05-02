@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.26)  2 MAY 2023 19:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.26)  2 MAY 2023 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1222,30 +1222,6 @@ Type  H <return>  for immediate help.
 l.306 \end{enumerate}
                      
 ? 
-! Missing { inserted.
-<to be read again> 
-                   \left 
-l.318 \end{align}
-                 
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.318 \end{align}
-                 
-? 
-! Missing { inserted.
-<to be read again> 
-                   \left 
-l.318 \end{align}
-                 
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.318 \end{align}
-                 
-? 
 (./gvv_math_eg.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 25--26
 [][]$\OT1/txr/m/n/9 https : / / github . com / Gunethra / AI1110[]2023 / tree /
@@ -1261,9 +1237,9 @@ Package rerunfilecheck Info: File `gvv_math_eg.out' has not changed.
 (rerunfilecheck)             Checksum: EDE23595DCA8A4392503813D74F4CD13;94.
  ) 
 Here is how much of TeX's memory you used:
- 29120 strings out of 478287
- 574647 string characters out of 5849289
- 830872 words of memory out of 5000000
+ 29119 strings out of 478287
+ 574635 string characters out of 5849289
+ 829872 words of memory out of 5000000
  46699 multiletter control sequences out of 15000+600000
  546122 words of font info for 198 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1275,10 +1251,10 @@ e/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on gvv_math_eg.pdf (1 page, 49968 bytes).
+Output written on gvv_math_eg.pdf (1 page, 49355 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 68 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
