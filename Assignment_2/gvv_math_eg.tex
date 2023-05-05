@@ -4,10 +4,12 @@
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{svg}
+\usepackage{tikz, pgfplots}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
-\usepackage{graphicx}
+\usepackage{graphicx,wrapfig}
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{txfonts}
@@ -20,6 +22,7 @@
 \usepackage{listings}
 
 
+\usetikzlibrary{positioning}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -118,14 +121,12 @@ columns=fullflexible
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
-
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
 
 
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
-\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
 % Added from https://raw.githubusercontent.com/gadepall/digital-communication/main/probability/trans.tex %%
 \newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
 \newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
@@ -133,6 +134,7 @@ columns=fullflexible
 \providecommand{\gauss}[2]{\mathcal{N}
 \ensuremath{\left(#1,#2\right)}}
 %%
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
 \providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
 \providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
 \providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
@@ -145,134 +147,47 @@ columns=fullflexible
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-%\providecommand{\abs}[1]{\left\vert#1\right\vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-%\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\(left\)vert#1\(right\)vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}}
+\providecommand{\norm}[1]{\(left\)lVert#1\(right\)rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-%\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\mean}[1]{E\(left\)[ #1 \(right\)]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-%\numberwithin{equation}{section}
-%\numberwithin{equation}{subsection}
-%\numberwithin{problem}{section}
-%\numberwithin{definition}{section}
-%\makeatletter
-%\@addtoreset{figure}{problem}
-%\makeatother
 
-%\let\StandardTheFigure\thefigure
 \let\vec\mathbf
-%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
-%\renewcommand{\thefigure}{\theproblem}
-%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
-%\counterwithin{equation}{enumi}
-
-
-%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
-
-%\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
-%     \def\rightbox#1{\makebox[0in][r]{#1}}
-%     \def\centbox#1{\makebox[0in]{#1}}
-%     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
-%     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 
 \vspace{3cm}
 
 \title{
-\textbf {Assignment 1}\\ \large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology Hyderabad
+\textbf {Assignment 2}\\ \large \textbf{AI1110}: Probability and Random Variables\\Indian Institute of Techonology, Hyderabad
 }
 \author{Gunethra Bommineni$^{*}$% <-this % stops a space
 	\thanks{*The student is with the Department
 		of Electrical Engineering, Indian Institute of Technology, Hyderabad
 		502285 India e-mail: ee22btech11205@iith.ac.in.}
   }
-%\title{
-%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
-%}
 
-
-% paper title
-% can use linebreaks \\ within to get better formatting as desired
-%\title{Matrix Analysis through Octave}
-%
-%
-% author names and IEEE memberships
-% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-% a structure at a ~ so this keeps an author's name from being broken across
-% two lines.
-% use \thanks{} to gain access to the first footnote area
-% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-% was not built to handle multiple paragraphs
-%
-
-%\author{<-this % stops a space
-%\thanks{}}
-%}
-% note the % following the last \IEEEmembership and also \thanks - 
-% these prevent an unwanted space from occurring between the last author name
-% and the end of the author line. i.e., if you had this:
-% 
-% \author{....lastname \thanks{...} \thanks{...} }
-%                     ^------------^------------^----Do not want these spaces!
-%
-% a space would be appended to the last name and could cause every name on that
-% line to be shifted left slightly. This is one of those "LaTeX things". For
-% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
-% "AB" then you have to do: "\textbf{A}\textbf{B}"
-% \thanks is no different in this regard, so shield the last } of each \thanks
-% that ends a line with a % and do not let a space in before the next \thanks.
-% Spaces after \IEEEmembership other than the last one are OK (and needed) as
-% you are supposed to have spaces between the names. For what it is worth,
-% this is a minor point as most people would not even notice if the said evil
-% space somehow managed to creep in.
-
-
-
-% The paper headers
-%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
-%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
-% The only time the second header will appear is for the odd numbered pages
-% after the title page when using the twoside option.
-% 
-% *** Note that you probably will NOT want to include the author's ***
-% *** name in the headers of peer review papers.                   ***
-% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
-% you desire.
-
-
-
-
-% If you want to put a publisher's ID mark on the page you can do it like
-% this:
-%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
-% Remember, if you use this you must call \IEEEpubidadjcol in the second
-% column for its text to clear the IEEEpubid mark.
-
-
-
-% make the title area
 \maketitle
 
 \newpage
 
-%\tableofcontents
 
 \bigskip
-
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \textbf{10.15.1.12}
 A game of chance consists of spinning an arrow
 which comes to rest pointing at one of the numbers
-1, 2, 3, 4, 5, 6, 7, 8 (see Fig. 15.5), and these are equally
+1, 2, 3, 4, 5, 6, 7, 8 (see Fig. 15.5 ), and these are equally
 likely outcomes. What is the probability that it will
 point at:
 \begin{enumerate}[label=(\roman*)]
@@ -286,7 +201,48 @@ a number greater than 2?
 a number less than 9?
 \end{enumerate}
 
-\includegraphics[scale=0.15]{figs/figure.png}
+%\includegraphics[scale=0.15]{figs/figure.png}
+
+\begin{tikzpicture}
+
+%outline%
+\filldraw[color=black!60, fill=white, very thick](2,0) circle (2.02);
+\draw[black!60, thick] (2,-2) -- (2,2);
+\draw[white!60, thin] (4,0) -- (-2,0);
+\draw[black!60, thick] (4,0) -- (-0.04,0);
+\draw[black!60, thick] (0.58578643762,-1.41421356237) -- (3.41421356237,1.41421356237);
+\draw[black!60, thick] (3.41421356237,-1.41421356237) -- (0.58578643762,1.41421356237);
+%%
+
+%Numbers%
+\node at (2.6,1.4) [] {1};
+\node at (3.4,0.6) [] {2};
+\node at (3.4,-0.6) [] {3};
+\node at (2.6,-1.4) [] {4};
+\node at (1.4,-1.4) [] {5};
+\node at (0.6,-0.6) [] {6};
+\node at (0.6,0.6) [] {7};
+\node at (1.4,1.4) [] {8};
+%%
+
+%Pointer%
+\draw[black!60, very thick] (2,0) -- (2.3867594105005, 0.9337198142057);
+\draw[black!60, very thick] (2.3867594105005, 0.9337198142057) -- (2.4141344385572, 0.6810718956735);
+\draw[black!60, very thick] (2.3867594105005, 0.9337198142057) -- (2.1887532860797, 0.774427825733);
+%%
+
+%outcome%
+\draw[black!60, very thick] (2.7059955543533, 1.7044240422949) -- (2.824738175107, 1.9910940877502); %1 
+\draw[black!60, very thick] (3.9910940877502, 0.824738175107) -- (3.7044240422949, 0.7059955543533); %2
+\draw[black!60, very thick] (3.9910940877502, -0.824738175107) -- (3.7044240422949, -0.7059955543533); %3
+\draw[black!60, very thick] (2.7059955543533, -1.7044240422949) -- (2.824738175107, -1.9910940877502); %4
+\draw[black!60, very thick] (1.17526182489, -1.9910940877502) -- (1.29400444565, -1.7044240422949); %5
+\draw[black!60, very thick] (0.00890591224, -0.824738175107) -- (0.2955759577, -0.7059955543533); %6
+\draw[black!60, very thick] (0.2955759577, 0.7059955543533) -- (0.00890591224, 0.824738175107); %7
+\draw[black!60, very thick] (1.29400444565, 1.7044240422949) -- (1.17526182489, 1.9910940877502); %8
+%%
+
+\end{tikzpicture}
 
 \textbf{Solution:}
 Let X be a random variable defined as the value given by the pointer. Probability of the pointer pointing a number is;
@@ -294,30 +250,43 @@ Let X be a random variable defined as the value given by the pointer. Probabilit
     p = \frac{1}{8}\\
     n = 8
 \end{align}
+
+Let $F_{X}\brak{i}$ be the Cumulative distribution function(CDF) such that;
+\begin{align}
+    F_{X} \brak{i} &= \sum_{0}^{i} {\comb{n}{i} \times p^{i} \times (1-p)^ \brak {n-i}}
+\end{align}
+
 \begin{enumerate}[label=(\roman*)]
 \item 
-For i = 8,
+For i = 8, required probability is equivalent to;
 \begin{align}
-\pr{X= 8} &= \frac{1}{8} \\
-       &= 0.125
-\end{align}
-\item
-For i = \cbrak{1, 3, 5, 7}
-\begin{align}
-    \pr{X} &= \frac{4}{8}\\
-       &= 0.5
+    \pr{X=8} &= F_{X}\brak{8}-F_{X}\brak{7}\\
+    &= \frac{1}{8}\\
+    &= 0.125
 \end{align}
 \item 
-For i = \cbrak{3, 4, 5, 6, 7, 8}
-\begin{align}
-    \pr{X} &= \frac{6}{8}\\
-       &= 0.75
-\end{align}
+For i being odd, required probability is equivalent to;
+\begin{multline}
+    \pr{X=\cbrak{1,3,5,7}} &= F_{X}\brak{7}-F_{X}\brak{6}+F_{X}\brak{5}-F_{X}\brak{4}\\
+    +F_{X}\brak{3}-F_{X}\brak{2}+F_{X}\brak{1}-F_{X}\brak{0}\\
+    &= \frac{4}{8}
+\end{multline}
+
 \item 
-For i = \cbrak{1, 2, 3, 4, 5, 6, 7, 8}
+For i = \cbrak{3, 4, 5, 6, 7, 8}, required probability is equivalent to;
 \begin{align}
-    \pr{X} &= \frac{8}{8}\\
-       &= 1
+    \pr{2 < X \le 8} &= F_{X}\brak{8}-F_{X}\brak{2}\\
+    &= \frac{6}{8}\\
+    &= 0.75
 \end{align}
+
+\item 
+For i = \cbrak{1, 2, 3, 4, 5, 6, 7, 8}, required probability is equivalent to;
+\begin{align}
+    \pr{1 \le X < 9} &= F_{X}\brak{8}-F_{X}\brak{0}\\
+    &= \frac{8}{8}\\
+    &= 1
+\end{align}
+
 \end{enumerate}
 \end{document}
