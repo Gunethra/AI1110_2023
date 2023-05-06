@@ -276,7 +276,8 @@ For i being odd, required probability is equivalent to;
 \item 
 For i greater than 2, required probability is equivalent to;
 \begin{align}
-    \pr{2 < X \le 8} &= F_{X}\brak{8}-F_{X}\brak{2}\\
+    \pr{X > 2} &= 1 - \pr{X \le 2}\\
+    &= 1 - \brak{F_{X}\brak{2}-F_{X}\brak{0}}\\
     &= \frac{6}{8}\\
     &= 0.75
 \end{align}
