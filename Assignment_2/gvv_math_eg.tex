@@ -201,8 +201,6 @@ a number greater than 2?
 a number less than 9?
 \end{enumerate}
 
-%\includegraphics[scale=0.15]{figs/figure.png}
-
 \begin{tikzpicture}
 
 %outline%
@@ -246,11 +244,18 @@ a number less than 9?
 
 \textbf{Solution:}
 Let X be a random variable defined as the value given by the pointer. The distribution is unform since all the outcomes are equally likely.
-
+\begin{align}
+    \therefore \pr{X=i}=\frac{1}{8}
+\end{align}
 Let $F_{X}\brak{i}$ be the Cumulative distribution function(CDF) such that;
 \begin{align}
     F_{X} \brak{i} &= P(X \leq i)\\
-    &= \sum_{0}^{i} {\pr{X=i}}
+    &=
+    \begin{cases}
+        0, & i \le 0\\
+        \sum_{0}^{i} {\pr{X=i}} & 1 \le i \le 8\\
+        1, & i \ge 9
+    \end{cases}
 \end{align}
 
 \begin{enumerate}[label=(\roman*)]
