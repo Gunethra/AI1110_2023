@@ -21,7 +21,9 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{code}
-{\url{https://github.com/Gunethra/AI1110_2023/tree/master/Assignment_2/code}}.
+\bibitem{plot}
+{\url{https://github.com/Gunethra/AI1110_2023/tree/master/Assignment_2/code/plot.py}}.
+\bibitem{simulation}
+{\url{https://github.com/Gunethra/AI1110_2023/tree/master/Assignment_2/code/code.py}}.
 
 \end{thebibliography}

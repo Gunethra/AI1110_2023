@@ -187,7 +187,7 @@ columns=fullflexible
 \textbf{10.15.1.12}
 A game of chance consists of spinning an arrow
 which comes to rest pointing at one of the numbers
-1, 2, 3, 4, 5, 6, 7, 8 (see Fig. 15.5 ), and these are equally
+1, 2, 3, 4, 5, 6, 7, 8 (see Fig. 4), and these are equally
 likely outcomes. What is the probability that it will
 point at:
 \begin{enumerate}[label=(\roman*)]
@@ -201,46 +201,52 @@ a number greater than 2?
 a number less than 9?
 \end{enumerate}
 
-\begin{tikzpicture}
+\begin{figure} [p h]
+    \setcounter{figure}{0}
+    \begin{tikzpicture}
+    
+	%outline%
+	\filldraw[color=black!60, fill=white, very thick](2,0) circle (2.02);
+	\draw[black!60, thick] (2,-2) -- (2,2);
+	\draw[white!60, thin] (4,0) -- (-2,0);
+	\draw[black!60, thick] (4,0) -- (-0.04,0);
+	\draw[black!60, thick] (0.58578643762,-1.41421356237) -- (3.41421356237,1.41421356237);
+	\draw[black!60, thick] (3.41421356237,-1.41421356237) -- (0.58578643762,1.41421356237);
+	%%
+	
+	%Numbers%
+	\node at (2.6,1.4) [] {1};
+	\node at (3.4,0.6) [] {2};
+	\node at (3.4,-0.6) [] {3};
+	\node at (2.6,-1.4) [] {4};
+	\node at (1.4,-1.4) [] {5};
+	\node at (0.6,-0.6) [] {6};
+	\node at (0.6,0.6) [] {7};
+	\node at (1.4,1.4) [] {8};
+	%%
+	
+	%Pointer%
+	\draw[black!60, very thick] (2,0) -- (2.3867594105005, 0.9337198142057);
+	\draw[black!60, very thick] (2.3867594105005, 0.9337198142057) -- (2.4141344385572, 0.6810718956735);
+	\draw[black!60, very thick] (2.3867594105005, 0.9337198142057) -- (2.1887532860797, 0.774427825733);
+	%%
 
-%outline%
-\filldraw[color=black!60, fill=white, very thick](2,0) circle (2.02);
-\draw[black!60, thick] (2,-2) -- (2,2);
-\draw[white!60, thin] (4,0) -- (-2,0);
-\draw[black!60, thick] (4,0) -- (-0.04,0);
-\draw[black!60, thick] (0.58578643762,-1.41421356237) -- (3.41421356237,1.41421356237);
-\draw[black!60, thick] (3.41421356237,-1.41421356237) -- (0.58578643762,1.41421356237);
-%%
+	%outcome%
+	\draw[black!60, very thick] (2.7059955543533, 1.7044240422949) -- (2.824738175107, 1.9910940877502); %1 
+	\draw[black!60, very thick] (3.9910940877502, 0.824738175107) -- (3.7044240422949, 0.7059955543533); %2
+	\draw[black!60, very thick] (3.9910940877502, -0.824738175107) -- (3.7044240422949, -0.7059955543533); %3
+	\draw[black!60, very thick] (2.7059955543533, -1.7044240422949) -- (2.824738175107, -1.9910940877502); %4
+	\draw[black!60, very thick] (1.17526182489, -1.9910940877502) -- (1.29400444565, -1.7044240422949); %5
+	\draw[black!60, very thick] (0.00890591224, -0.824738175107) -- (0.2955759577, -0.7059955543533); %6
+	\draw[black!60, very thick] (0.2955759577, 0.7059955543533) -- (0.00890591224, 0.824738175107); %7
+	\draw[black!60, very thick] (1.29400444565, 1.7044240422949) -- (1.17526182489, 1.9910940877502); %8
+	%%
 
-%Numbers%
-\node at (2.6,1.4) [] {1};
-\node at (3.4,0.6) [] {2};
-\node at (3.4,-0.6) [] {3};
-\node at (2.6,-1.4) [] {4};
-\node at (1.4,-1.4) [] {5};
-\node at (0.6,-0.6) [] {6};
-\node at (0.6,0.6) [] {7};
-\node at (1.4,1.4) [] {8};
-%%
 
-%Pointer%
-\draw[black!60, very thick] (2,0) -- (2.3867594105005, 0.9337198142057);
-\draw[black!60, very thick] (2.3867594105005, 0.9337198142057) -- (2.4141344385572, 0.6810718956735);
-\draw[black!60, very thick] (2.3867594105005, 0.9337198142057) -- (2.1887532860797, 0.774427825733);
-%%
+    \end{tikzpicture}
+\caption{Spinner}
+\end{figure}
 
-%outcome%
-\draw[black!60, very thick] (2.7059955543533, 1.7044240422949) -- (2.824738175107, 1.9910940877502); %1 
-\draw[black!60, very thick] (3.9910940877502, 0.824738175107) -- (3.7044240422949, 0.7059955543533); %2
-\draw[black!60, very thick] (3.9910940877502, -0.824738175107) -- (3.7044240422949, -0.7059955543533); %3
-\draw[black!60, very thick] (2.7059955543533, -1.7044240422949) -- (2.824738175107, -1.9910940877502); %4
-\draw[black!60, very thick] (1.17526182489, -1.9910940877502) -- (1.29400444565, -1.7044240422949); %5
-\draw[black!60, very thick] (0.00890591224, -0.824738175107) -- (0.2955759577, -0.7059955543533); %6
-\draw[black!60, very thick] (0.2955759577, 0.7059955543533) -- (0.00890591224, 0.824738175107); %7
-\draw[black!60, very thick] (1.29400444565, 1.7044240422949) -- (1.17526182489, 1.9910940877502); %8
-%%
-
-\end{tikzpicture}
 
 \textbf{Solution:}
 Let X be a random variable defined as the value given by the pointer. The distribution is unform since all the outcomes are equally likely.
@@ -253,25 +259,27 @@ Let $F_{X}\brak{i}$ be the Cumulative distribution function(CDF) such that;
     &=
     \begin{cases}
         0, & i \le 0\\
-        \sum_{0}^{i} {\pr{X=i}} & 1 \le i \le 8\\
+        \frac{i}{8} & 1 \le i \le 8\\
         1, & i \ge 9
     \end{cases}
 \end{align}
+
+\includegraphics[scale=0.15]{code/plot.png}
+See python code for plot:\cite{plot}
 
 \begin{enumerate}[label=(\roman*)]
 \item 
 For i = 8, required probability is equivalent to;
 \begin{align}
     \pr{X=8} &= F_{X}\brak{8}-F_{X}\brak{7}\\
-    &= \frac{1}{8}\\
-    &= 0.125
+    &= \frac{1}{8}= 0.125
 \end{align}
 \item 
 For i being odd, required probability is equivalent to;
 \begin{multline}
     \pr{X=\cbrak{1,3,5,7}} &= F_{X}\brak{7}-F_{X}\brak{6}+F_{X}\brak{5}-F_{X}\brak{4}\\
     +F_{X}\brak{3}-F_{X}\brak{2}+F_{X}\brak{1}-F_{X}\brak{0}\\
-    &= \frac{4}{8}
+    &= \frac{4}{8}=0.5
 \end{multline}
 
 \item 
@@ -279,19 +287,17 @@ For i greater than 2, required probability is equivalent to;
 \begin{align}
     \pr{X > 2} &= 1 - \pr{X \le 2}\\
     &= 1 - \brak{F_{X}\brak{2}-F_{X}\brak{0}}\\
-    &= \frac{6}{8}\\
-    &= 0.75
+    &= \frac{6}{8}= 0.75
 \end{align}
 
 \item 
 For i less than 9, required probability is equivalent to;
 \begin{align}
     \pr{1 \le X < 9} &= F_{X}\brak{8}-F_{X}\brak{0}\\
-    &= \frac{8}{8}\\
-    &= 1
+    &= \frac{8}{8}= 1
 \end{align}
 
 \end{enumerate}
-Python code:\cite{code}
+See simulation using python:\cite{simulation}
 \bibliography{bibliography}
 \end{document}
