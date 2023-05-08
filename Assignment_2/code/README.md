@@ -1,1 +1,1 @@
-Added `output.txt` and `cdfplot.png` obtained for the python code.
+Added `output.txt` and `plot.png` obtained for the python code.
