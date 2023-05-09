@@ -22,7 +22,7 @@
 \BIBdecl
 
 \bibitem{plot}
-{\url{https://github.com/Gunethra/AI1110_2023/tree/master/Assignment_2/code/pmf.py}
+{\url{https://github.com/Gunethra/AI1110_2023/tree/master/Assignment_2/code/pmf.py}\\
 \url{https://github.com/Gunethra/AI1110_2023/tree/master/Assignment_2/code/cdf.py}}.
 \bibitem{simulation}
 {\url{https://github.com/Gunethra/AI1110_2023/tree/master/Assignment_2/code/code.py}}.
