@@ -12,7 +12,6 @@ ax.stem(np.arange(1, n+1), cdf)
 
 ax.set_xlabel('Outcome', fontsize="45", labelpad=20)
 ax.set_ylabel('CDF', fontsize="45", labelpad=20)
-ax.set_title('Cumulative Distribution Function', fontsize="45", pad=30)
 
 ax.set_xticks(np.arange(1, n+1))
 ax.set_xticklabels(np.arange(1, n+1))
