@@ -1,17 +1,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-pmf = np.full((n,), 1/8)
-pmf[0]=0
+# Define the sample space of the spinner
+sample_space = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-fig, ax = plt.subplots()
-ax.stem(np.arange(1, n+1), pmf)
+# Define the probability distribution of the spinner
 
-ax.set_xlabel('Outcome', fontsize="45", labelpad=10)
-ax.set_ylabel('PMF', fontsize="45", labelpad=20)
-ax.set_xticks(np.arange(0, 9))
-ax.set_xticklabels(np.arange(0, 9))
-ax.set_ylim([0, 1.2])
-plt.xticks(fontsize=36)
-plt.yticks(fontsize=36)
+prob_dist = [0, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8]
+
+# Define the pmf for the spinner
+
+pmf = [0, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8]
+
+# Plot the PMF using a stem plot
+
+plt.stem(pmf)
+plt.title ("Probability Mass Function for the Spinner")
+plt.xlabel("Observation")
+plt.ylabel ("PMF")
+plt.grid('on' 'on')
 plt.show()
+# plt.savefig("../figs/pmf.png")
