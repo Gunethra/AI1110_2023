@@ -1,23 +1,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-n=11
-pmf = np.full((n,), 1/8)
-cdf = np.cumsum(pmf)
-for i in range(8,n):
-    cdf[i] = 1
+# Define the sample space of the spinner
+sample_space = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-fig, ax = plt.subplots()
-ax.stem(np.arange(1, n+1), cdf)
+# Define the probability distribution of the spinner
 
-ax.set_xlabel('Outcome', fontsize="45", labelpad=20)
-ax.set_ylabel('CDF', fontsize="45", labelpad=20)
+prob_dist = [0, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8]
 
-ax.set_xticks(np.arange(1, n+1))
-ax.set_xticklabels(np.arange(1, n+1))
+# Calculate the cumulative probabilities for the spinner
 
-plt.xticks(fontsize=36)
-plt.yticks(fontsize=36)
+cumulative_prob = np.cumsum(prob_dist)
 
-ax.set_ylim([0, 1.2])
+# Plot the CDF using a stem plot
+
+plt.stem(cumulative_prob)
+plt.title ("Cumulative Distribution Function for the Spinner")
+plt.xlabel("Observation")
+plt.ylabel (" Cumulative Probability")
+plt.grid('on' 'on')
 plt.show()
+plt.savefig("../figs/cdf.png")
